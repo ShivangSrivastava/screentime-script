@@ -6,70 +6,69 @@ Welcome to the **ScreenTime Script**! This handy tool helps you keep track of yo
 
 1. **Clone the Repository:**
 
-   ```bash
-   git clone https://github.com/ShivangSrivastava/screentime-script.git
-   cd screentime-script
-   ```
+```bash
+git clone https://github.com/ShivangSrivastava/screentime-script.git
+cd screentime-script
+```
 
 2. **Rename files i.e. remove .sh**
 
-   ```bash
-   # Keep .sh file
-   cp startscreentime.sh startscreentime
-   cp screentime.sh screentime
-
-   # Rename original file
-   mv startscreentime.sh startscreentime
-   mv screentime.sh screentime
-   ```
+```bash
+# Keep .sh file
+cp startscreentime.sh startscreentime
+cp screentime.sh screentime
+# Rename original file
+mv startscreentime.sh startscreentime
+mv screentime.sh screentime
+```
 
 3. **Move Scripts to `/usr/local/bin`:**
 
    This makes the scripts available system-wide.
 
-   ```bash
-   sudo cp startscreentime /usr/local/bin/
-   sudo cp screentime /usr/local/bin/
-   ```
+```bash
+sudo cp startscreentime /usr/local/bin/
+sudo cp screentime /usr/local/bin/
+```
 
 4. **Make Scripts Executable:**
 
    Ensure the scripts have execute permissions.
 
-   ```bash
-   sudo chmod +x /usr/local/bin/startscreentime
-   sudo chmod +x /usr/local/bin/screentime
-   ```
+```bash
+sudo chmod +x /usr/local/bin/startscreentime
+sudo chmod +x /usr/local/bin/screentime
+```
 
 5. **Add `startscreentime` Command to Your Shell Configuration:**
 
    Add the following line to your `.bashrc` or `.zshrc` file to ensure the script runs every time you open a terminal.
 
-   ```bash
-   echo 'startscreentime' >> ~/.bashrc# For Bash users
-   echo 'startscreentime' >> ~/.zshrc# For Zsh users
-   ```
+```bash
+echo 'startscreentime' >> ~/.bashrc# For Bash users
+echo 'startscreentime' >> ~/.zshrc# For Zsh users
+```
 
-   After updating your `.bashrc` or `.zshrc`, reload the file:
+After updating your `.bashrc` or `.zshrc`, reload the file:
 
-   ```bash
-   source ~/.bashrc# For Bash users
-   source ~/.zshrc# For Zsh users
-   ```
+```bash
+source ~/.bashrc# For Bash users
+source ~/.zshrc# For Zsh users
+```
 
 ## 🖥️ Usage
 
 - **Default Usage:** To calculate the screen time for the current date, simply run:
 
-  ```bash
-  screentime
-  ```
+```bash
+screentime
+```
 
 - **Show Screen Time for All Dates:** To display screen time for all recorded dates, use:
 
-  ```bash
-  screentime -a
-  ```
+```bash
+screentime -a
+```
 
 ## 📜 Script Overview
 
