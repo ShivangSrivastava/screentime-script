@@ -1,93 +1,85 @@
 # 📅 ScreenTime Script 📅
 
-Welcome to the **ScreenTime Script**! This handy tool helps you keep track of your screen time on your Linux computer. Follow the instructions below to get started and integrate it into your workflow.
+Welcome to the ScreenTime Script! 🎉 This tool helps you track your screen time on a Linux computer. Follow the steps below to set it up and integrate it into your daily workflow. 🌟
 
-## 🛠️ Installation
+## 🚀 Quick Start Guide
 
-1. **Clone the Repository:**
+### 1. Clone the Repository
 
-   ```bash
-   git clone https://github.com/ShivangSrivastava/screentime-script.git
-   cd screentime-script
-   ```
+First, clone this repository to your local machine:
+```bash
+git clone https://github.com/ShivangSrivastava/screentime-script.git
+cd screentime-script
+```
 
-2. **Rename files i.e. remove .sh**
+### 2. Rename and Move Files
 
-   ```bash
-   # Keep .sh file
-   cp startscreentime.sh startscreentime
-   cp screentime.sh screentime
-   # Rename original file
-   mv startscreentime.sh startscreentime
-   mv screentime.sh screentime
-   ```
+Move the provided files to `/usr/local/bin` for system-wide accessibility. You can rename them as needed.
 
-3. **Move Scripts to `/usr/local/bin`:**
+```bash
+# Rename files
+mv startscreentime.sh startscreentime
+mv screentime.sh screentime
+# Move files
+sudo mv startscreentime /usr/local/bin/
+sudo mv screentime /usr/local/bin/
+sudo mv screentime.py /usr/local/bin/
+```
 
-   This makes the scripts available system-wide.
+### 3. Make Scripts Executable
 
-   ```bash
-   sudo cp startscreentime /usr/local/bin/
-   sudo cp screentime /usr/local/bin/
-   ```
+Ensure the scripts have execute permissions:
+```bash
+sudo chmod +x /usr/local/bin/startscreentime
+sudo chmod +x /usr/local/bin/screentime
+```
 
-4. **Make Scripts Executable:**
+### 4. Add `startscreentime` Command to Your Shell Configuration
 
-   Ensure the scripts have execute permissions.
+To make the `startscreentime` command available in your terminal, add the following line to your `.bashrc` or `.zshrc` file:
 
-   ```bash
-   sudo chmod +x /usr/local/bin/startscreentime
-   sudo chmod +x /usr/local/bin/screentime
-   ```
+```bash
+echo startscreentime > ~/.bashrc
+# or
+echo startscreentime > ~/.zshrc
+```
 
-5. **Add `startscreentime` Command to Your Shell Configuration:**
+After updating your `.bashrc` or `.zshrc`, reload the file:
 
-   Add the following line to your `.bashrc` or `.zshrc` file to ensure the script runs every time you open a terminal.
+```bash
+source ~/.bashrc
+# or
+source ~/.zshrc
+```
 
-   ```bash
-   echo 'startscreentime' >> ~/.bashrc# For Bash users
-   echo 'startscreentime' >> ~/.zshrc# For Zsh users
-   ```
+## 🛠️ Usage
 
-   After updating your `.bashrc` or `.zshrc`, reload the file:
+### Start Tracking Screen Time
 
-   ```bash
-   source ~/.bashrc# For Bash users
-   source ~/.zshrc# For Zsh users
-   ```
+> Open terminal to initiate screen time tracking
 
-## 🖥️ Usage
+### Display Screen Time
 
-- **Default Usage:** To calculate the screen time for the current date, simply run:
+You can display today's screen time or view all screen time records:
 
+- To view today's screen time:
   ```bash
   screentime
   ```
 
-- **Show Screen Time for All Dates:** To display screen time for all recorded dates, use:
-
+- To view all screen time records:
   ```bash
   screentime -a
   ```
 
-## 📜 Script Overview
+- To view today's raw screen time (without additional string):
+  ```bash
+  screentime -r
+  ```
 
-### `startscreentime`
+## 🤝 Contributing
 
-- **Purpose:** Logs your active screen time to `/tmp/screen_time_log.txt`.
-- **Behavior:** Runs when you open a new terminal and logs the timestamp if the system is active.
-
-### `screentime`
-
-- **Purpose:** Calculates the total screen time based on the log entries.
-- **Options:**
-- **Default:** Shows screen time for the current date.
-- **`-a`:** Shows screen time for all recorded dates.
-
-## 🔄 Updates & Maintenance
-
-Feel free to contribute or suggest improvements! If you encounter any issues, open an issue on the repository or submit a pull request.
+Feel free to open issues or submit pull requests if you have any suggestions or improvements!
 
 ---
-
-Thank you for using the **ScreenTime Script**! Stay productive and keep track of your screen time efficiently! 🚀
+Happy tracking! 🕒✨
