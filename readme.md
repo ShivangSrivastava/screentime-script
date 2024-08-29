@@ -7,6 +7,7 @@ Welcome to the ScreenTime Script! 🎉 This tool helps you track your screen tim
 ### 1. Clone the Repository
 
 First, clone this repository to your local machine:
+
 ```bash
 git clone https://github.com/ShivangSrivastava/screentime-script.git
 cd screentime-script
@@ -29,6 +30,7 @@ sudo mv screentime.py /usr/local/bin/
 ### 3. Make Scripts Executable
 
 Ensure the scripts have execute permissions:
+
 ```bash
 sudo chmod +x /usr/local/bin/startscreentime
 sudo chmod +x /usr/local/bin/screentime
@@ -39,9 +41,9 @@ sudo chmod +x /usr/local/bin/screentime
 To make the `startscreentime` command available in your terminal, add the following line to your `.bashrc` or `.zshrc` file:
 
 ```bash
-echo startscreentime > ~/.bashrc
+echo startscreentime >> ~/.bashrc
 # or
-echo startscreentime > ~/.zshrc
+echo startscreentime >> ~/.zshrc
 ```
 
 After updating your `.bashrc` or `.zshrc`, reload the file:
@@ -63,11 +65,13 @@ source ~/.zshrc
 You can display today's screen time or view all screen time records:
 
 - To view today's screen time:
+
   ```bash
   screentime
   ```
 
 - To view all screen time records:
+
   ```bash
   screentime -a
   ```
@@ -82,4 +86,5 @@ You can display today's screen time or view all screen time records:
 Feel free to open issues or submit pull requests if you have any suggestions or improvements!
 
 ---
+
 Happy tracking! 🕒✨
