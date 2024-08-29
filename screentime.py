@@ -32,11 +32,6 @@ class ScreenTime:
         self.raw = raw
 
     def start(self):
-        with open(TODAY_LOG_FILE) as file:
-            timestamps = file.readlines()
-            if timestamps and not self.isNewDay(int(timestamps[0].strip("\n"))):
-                return
-
         self._store(int(time.time()))
 
 
